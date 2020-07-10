@@ -4,9 +4,17 @@
   "description": "WebRTC util modules",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "$(npm bin)/jasmine",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eyevinn/node-webrtc"
   },
   "author": "Eyevinn Technology AB <work@eyevinn.se>",
+  "contributors": [
+    "Jonas Rydholm Birmé <jonas.birme@eyevinn.se> (Eyevinn Technology AB)"
+  ],
   "license": "MIT",
   "dependencies": {
     "debug": "^4.1.1",
@@ -15,5 +23,8 @@
     "fastify-swagger": "^2.6.0",
     "uuid": "^8.1.0",
     "wrtc": "^0.4.5"
+  },
+  "devDependencies": {
+    "jasmine": "^3.5.0"
   }
 }
